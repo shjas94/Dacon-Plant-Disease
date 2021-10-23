@@ -1,0 +1,29 @@
+PATH:
+  DATA: "/content/DATA"
+  SAVE: "./models"
+MODEL:
+  MODEL_NAME: "Swin"
+  WEIGHT_NAME: "swin_base_patch4_window12_384"
+DATA:
+  IMG_SIZE: [384, 384]
+TRAIN:
+  RESUME_TRAIN: False
+  EPOCH: 200
+  BATCH_SIZE: 8
+  VAL_BATCH_SIZE: 1
+  LR: 1e-04
+  OPTIMIZER: "sam"
+  MULTI_CRITERION: False
+  CRITERION1: "focal"
+  CRITERION2: "ce"
+  GAMMA: 2.0
+  WEIGHT_DECAY: 1e-06
+  SEED: 42
+  MIXUP: False
+  ALPHA: 0.5
+  SCHEDULER: null
+  PATIENCE: 15
+  RUN_NAME: "Swin_Base"
+INFERENCE:
+  SUBMISSION_NAME: "Model2.csv"
+  BATCH_SIZE: 16
